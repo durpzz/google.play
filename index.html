@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Conheça o aplicativo Meu Patrocínio."
+    />
+    <title>Meu Patrocínio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="app-page" aria-labelledby="app-title">
+        <header class="app-header">
+          <img
+            class="app-icon"
+            src="assets/meu-patrocinio.png"
+            alt="Logo do Meu Patrocínio"
+          />
+
+          <div class="app-heading">
+            <h1 id="app-title">Meu Patrocínio</h1>
+            <p class="publisher">Meu Patrocínio</p>
+            <p class="purchase-note">Contém anúncios · Compras no app</p>
+          </div>
+        </header>
+
+        <button class="install-button" id="install-button" type="button">
+          Instalar
+        </button>
+
+        <section class="stats" aria-label="Informações do aplicativo">
+          <div class="stat">
+            <strong>4,8<span class="star">★</span></strong>
+            <span>2,4 mi avaliações</span>
+          </div>
+
+          <div class="stat stat-middle">
+            <strong>10 mi+</strong>
+            <span>Downloads</span>
+          </div>
+
+          <div class="stat">
+            <strong class="age-rating">18</strong>
+            <span>Classificação</span>
+          </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="about" aria-labelledby="about-title">
+          <div class="section-title-row">
+            <h2 id="about-title">Sobre este app</h2>
+            <span aria-hidden="true">›</span>
+          </div>
+          <p>
+            Uma plataforma feita para aproximar pessoas, criar conexões e
+            descobrir novas possibilidades.
+          </p>
+        </section>
+
+        <section class="details" aria-label="Detalhes adicionais">
+          <span class="tag">Relacionamento</span>
+          <span class="tag">Social</span>
+        </section>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">
+      Download iniciado
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

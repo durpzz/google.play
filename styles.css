@@ -1,0 +1,302 @@
+:root {
+  color-scheme: light;
+  font-family: "Inter", Arial, sans-serif;
+  color: #202124;
+  background: #f4f6f8;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at 50% 5%, rgba(1, 135, 95, 0.08), transparent 34rem),
+    #f4f6f8;
+}
+
+button {
+  font: inherit;
+}
+
+.page-shell {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 32px 16px;
+}
+
+.app-page {
+  width: min(100%, 430px);
+  min-height: min(760px, calc(100vh - 64px));
+  padding: 36px 26px 42px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e6e9ed;
+  border-radius: 28px;
+  box-shadow: 0 22px 60px rgba(27, 39, 51, 0.14);
+}
+
+.app-header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.app-icon {
+  width: 88px;
+  height: 88px;
+  flex: 0 0 auto;
+  object-fit: cover;
+  border-radius: 22px;
+  box-shadow: 0 5px 16px rgba(32, 33, 36, 0.14);
+}
+
+.app-heading {
+  min-width: 0;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 7px;
+  font-size: 23px;
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+}
+
+.publisher {
+  margin-bottom: 8px;
+  color: #01875f;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.purchase-note {
+  margin-bottom: 0;
+  color: #6f7479;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.install-button {
+  width: 100%;
+  height: 48px;
+  margin-top: 28px;
+  border: 0;
+  border-radius: 9px;
+  color: #fff;
+  background: #01875f;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    background 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.install-button:hover {
+  background: #087f5b;
+  box-shadow: 0 7px 16px rgba(1, 135, 95, 0.22);
+  transform: translateY(-1px);
+}
+
+.install-button:active {
+  box-shadow: none;
+  transform: translateY(1px);
+}
+
+.install-button:focus-visible {
+  outline: 3px solid rgba(1, 135, 95, 0.25);
+  outline-offset: 3px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 31px;
+}
+
+.stat {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.stat-middle::before,
+.stat-middle::after {
+  position: absolute;
+  top: 2px;
+  width: 1px;
+  height: 28px;
+  background: #e0e3e7;
+  content: "";
+}
+
+.stat-middle::before {
+  left: 0;
+}
+
+.stat-middle::after {
+  right: 0;
+}
+
+.stat strong {
+  min-height: 22px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.stat span {
+  color: #777c82;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+
+.stat .star {
+  margin-left: 2px;
+  color: #202124;
+  font-size: 10px;
+}
+
+.stat .age-rating {
+  display: grid;
+  width: 22px;
+  height: 22px;
+  place-items: center;
+  border: 1.5px solid #5f6368;
+  border-radius: 3px;
+  font-size: 11px;
+}
+
+.divider {
+  height: 1px;
+  margin: 34px -26px 27px;
+  background: #eceff1;
+}
+
+.section-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-title-row h2 {
+  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.section-title-row span {
+  margin-top: -16px;
+  color: #5f6368;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.about p {
+  margin-bottom: 0;
+  color: #5f6368;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 28px;
+}
+
+.tag {
+  padding: 8px 13px;
+  border: 1px solid #dadce0;
+  border-radius: 18px;
+  color: #5f6368;
+  font-size: 12px;
+}
+
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  padding: 12px 18px;
+  border-radius: 8px;
+  color: #fff;
+  background: #303134;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+  font-size: 13px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 18px);
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.toast.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+@media (max-width: 480px) {
+  body {
+    background: #fff;
+  }
+
+  .page-shell {
+    display: block;
+    padding: 0;
+  }
+
+  .app-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 22px 40px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .app-icon {
+    width: 78px;
+    height: 78px;
+    border-radius: 19px;
+  }
+
+  .app-header {
+    gap: 16px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .divider {
+    margin-right: -22px;
+    margin-left: -22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
