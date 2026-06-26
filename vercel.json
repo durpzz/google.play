@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/aplicativo/app",
+      "destination": "/store.html"
+    },
+    {
+      "source": "/aplicativo/app/",
+      "destination": "/store.html"
+    }
+  ]
+}
